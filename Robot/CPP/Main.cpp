@@ -9,6 +9,7 @@ class BuiltinDefaultCode : public IterativeRobot
 public:
         BuiltinDefaultCode(void)        
         {
+                // Declare Motor Controllers(Victor) and Joysticks
                 rightStick = new Joystick(1);
                 leftStick = new Joystick(2);
                 
@@ -27,10 +28,7 @@ public:
         }
         
         void AutonomousInit(void)
-        {/*
-                shooterMotor->Set(-1.0f);
-                time.Reset();
-                time.Start();*/
+        {
         }
         
         void TeleopInit(void)
@@ -42,15 +40,7 @@ public:
         }
         
         void AutonomousPeriodic(void)
-        {/*
-                if (time.HasPeriodPassed(10000));
-                {
-                        diskPusher->Set(1.0f);
-                        shootTimer.Reset();
-                        shootTimer.Start();
-                }
-                if (shootTimer.HasPeriodPassed(launchTimer))
-                        diskPusher->Set(0.0f);*/
+        {
         }        
         
         void TeleopPeriodic(void)
