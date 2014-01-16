@@ -5,7 +5,7 @@ float Physics::PhysicsClass::fForce(float mass, float acceleration)
 	return mass * acceleration;
 }
 
-float Physics::PhysicsClass::Friction(float force, float frictionCoefficiant)
+float Physics::PhysicsClass::Friction(float force, float frictionCoefficiant, float forceNormal)
 {
 	return force * frictionCoefficiant;
 }
