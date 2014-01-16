@@ -1,6 +1,6 @@
 #include "Physics.h"
 
-float Physics::PhysicsClass::fForce(float mass, float acceleration)
+float Physics::PhysicsClass::Force(float mass, float acceleration)
 {
 	return mass * acceleration;
 }
