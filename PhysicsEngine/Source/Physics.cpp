@@ -5,9 +5,9 @@ float Physics::PhysicsClass::fForce(float mass, float acceleration)
 	return mass * acceleration;
 }
 
-float Physics::PhysicsClass::Friction(float force, float frictionCoefficiant, float forceNormal)
+float Physics::PhysicsClass::Friction(float forceNormal, float frictionCoefficiant)
 {
-	return force * frictionCoefficiant;
+	return forceNormal * frictionCoefficiant;
 }
 
 float Physics::PhysicsClass::Drag(float fluidDensity, float velocity, float crossSectionSA, float dragCoefficiant)
