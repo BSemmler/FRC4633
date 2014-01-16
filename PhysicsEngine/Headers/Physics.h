@@ -6,7 +6,7 @@ namespace Physics
 	public:
 		float fForce(float mass, float acceleration); // Input mass, acceleration
 		
-		float Friction(float force, float frictionCoefficiant);
+		float Friction(float force, float frictionCoefficiant, float forceNormal);
 		
 		float Drag(float fluidDensity, float velocity, float crossSectionSA, float dragCoefficiant);
 		
