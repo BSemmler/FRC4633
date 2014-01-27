@@ -2,7 +2,7 @@
 
 class BuiltinDefaultCode : public IterativeRobot
 {
-		// Declare Motor Controllers(Victor)8
+	// Declare Motor Controllers(Victor)8
         Joystick *rightStick, *leftStick;
         Victor *leftFrontDrive, *rightFrontDrive, *leftRearDrive, *rightRearDrive;
         DriverStationLCD *LCD;
