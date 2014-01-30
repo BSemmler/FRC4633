@@ -1,0 +1,51 @@
+Add a list of things to do here and state their importance between "1 - 10"
+
+Also add which language this needs to be programmed in. If unsure place "??" 
+after ranking value. 
+
+Add code quality rating with a number between "1 - 5" 
+e.g. if a piece of code is guaranteed to work each time with no bugs or errors
+then give it a value of "5". If it is code thats rough but usable give it a
+rating of "1". If the code is incomplete give "0"
+
+If a piece of Code is complete Give it the tag "COMPLETE" else give INCOMPLETE
+ 
+If it is not a programming specific task Add "General"
+after the Ranking. 
+
+Example:
+NAME - Importance Ranking - Language - Quality - COMPLETE/INCOMPLETE
+  - Details if any / subtasks
+
+
+
+
+
+
+
+
+All programmers learn C plus plus - 10 - C++ - 0 - INCOMPLETE
+  - Operators
+  - Functions
+  - Data Types
+  - Classes/Structures
+  - Source and Header files
+  - Loops
+  - Libraries
+  - Pointers
+  - Dynamic Memory
+  - Inheritance
+
+All programmers learn LabView - 10 - Labview - 0 - INCOMPLETE
+  - ?
+  - ?
+  - ?
+
+All programmers learn how to download and use code on the robot - 7 - General - INCOMPLETE
+
+Create programmers flowchart - 10 - General
+  - Enumerate all controllable components
+  - Decide user interface (front end of the code)
+  - Determine architecture code (back end of the code)
+
+Figure out interop between C++ and LabView - 10 - C++/LabView - 0 - INCOMPLETE
