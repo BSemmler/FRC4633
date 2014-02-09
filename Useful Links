@@ -3,3 +3,6 @@ http://wpilib.screenstepslive.com/s/3120/m/8559/l/89727?data-resolve-url=true&da
 
 If cRIO ever gets interupted during Imaging use the information on the --- 2nd POST --- of this link to Reset it back to Factory
 https://decibel.ni.com/content/thread/1927
+
+How to use Solenoids/Valves C++
+http://wpilib.screenstepslive.com/s/3120/m/7912/l/132407-operating-pneumatic-cylinders-solenoids
