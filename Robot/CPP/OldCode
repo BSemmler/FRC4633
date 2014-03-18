@@ -1,0 +1,88 @@
+#include "WPILib.h"
+#include "DashboardStream.h"
+//#include "Drive.h"
+
+
+using namespace std;
+
+class BuiltinDefaultCode : public IterativeRobot
+{
+	Compressor *AC;
+	Relay* relay;
+    int counter;
+    Relay::Value v;
+	DigitalModule* module;
+	DashboardStream dash;
+
+public:
+        BuiltinDefaultCode(void)
+        {
+        	//AC = new Compressor(14,1);
+        	//AC->Start();
+        	//relay = new Relay(1, Relay::kForwardOnly);
+        	counter = 0;
+        	v = Relay::kOff;
+        	module  = DigitalModule::GetInstance(SensorBase::GetDefaultDigitalModule());
+        }
+        
+        void RobotInit(void)
+        {
+        	/* Once the start function is called no further programming
+        	 * is required. However if needed the Stop() function can be
+        	 * called.                                                   
+        	 * */
+        	
+        }
+        
+        void DisabledInit(void)
+        {
+        }
+        
+        void AutonomousInit(void)
+        {
+        	/*
+        	 * To download to robot:
+        	 * 
+        	 * Hit build all
+        	 * Then Goto FIRST then select Undeploy
+        	 * Then goto FIRST again and select Deploy
+        	 * Then goto Driver Station under diagnostics click reboot cRIO
+        	 * Then wait for crio to reboot*/
+        }
+        
+        void TeleopInit(void)
+        {
+        }
+        
+        void DisabledPeriodic(void)
+        {
+        	//airCompressor->Stop();
+        }
+        
+        void AutonomousPeriodic(void)
+        {
+        	//TestSolenoid->Set(true);
+        }
+        void TeleopPeriodic(void)
+        {
+       // AC->Start();
+        	if (++counter > 19)
+        	{
+        		counter = 0;
+        		v = (v == Relay::kOff) ? Relay::kOn : Relay::kOff;
+            	dash(L1);
+            	for (int j = 1; j <= 8; j++)
+            	{
+            		module->SetRelayForward(j, (v != Relay::kOff));
+            		dash() << " " << (int)module->GetRelayForward(j);
+            	}
+            	dash() << std::endl;        	}
+
+        	//dash(L1) << counter << "\t" << v << "\t" << relay->Get() << std::endl;
+        	
+			//dash(L2) << counter << "\t" << relay->GetError().GetMessage() << std::endl;
+			dash(L3) << counter << " " << v << " " << ErrorBase::GetGlobalError().GetCode() << " !" << std::endl;
+        }
+};
+
+START_ROBOT_CLASS(BuiltinDefaultCode);
